@@ -1,0 +1,7 @@
+.formLines {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    /* border: black 2px solid */
+}
