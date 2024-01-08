@@ -1,18 +1,40 @@
 <?php
 // Header
-include '../views/templates/header.php'
+include '../views/templates/header.php';
+$paternSpecChar = '/[\'\/^£$%&*()}{@#~?><>,|=_+¬-]/';
 ?>
 <!-- body -->
 <form action="../controllers/controller-signup.php" method="post">
     <div class="formLines">
         <label for="">Nom</label>
         <input name="nom" type="text" placeholder="Ex: Hervé">
-        <p>text</p>
+        <!-- If (empty($var)) cherche si $var est vide. Retourne true si vide. -->
+        <p class="errorText">
+            <?php
+            if (isset($_POST['nom'])) {
+                if (preg_match($paternSpecChar, $_POST['nom'])) {
+                    echo 'Pas de charactère spéciaux';
+                } else if (empty($_POST['nom'])) {
+                    echo 'Entrez votre nom';
+                }
+            }
+            ?>
+        </p>
     </div>
     <div class="formLines">
         <label for="">Prénom</label>
         <input name="prenom" type="text" placeholder="Ex: Benjamin">
-        <p></p>
+        <p class="errorText">
+            <?php
+            if (isset($_POST['prenom'])) {
+                if (preg_match($paternSpecChar, $_POST['prenom'])) {
+                    echo 'Pas de charactère spéciaux';
+                } else if (empty($_POST['prenom'])) {
+                    echo 'Entrez votre prénom';
+                }
+            }
+            ?>
+        </p>
     </div>
     <div class="formLines">
         <label for="">Date de naissance</label>
