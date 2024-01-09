@@ -1,10 +1,39 @@
+/* header */
+h1 {
+    text-align: center;
+}
+/* body */
+.form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 0px;
+    /* border: solid 1px black; */
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #DADADA;
+}
+
 .formLines {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: 10px;
-    /* border: black 2px solid */
+    margin: 10px 5px;
 }
+
 .errorText {
     color: red;
+    margin: 0;
+}
+
+.submitButton {
+    margin-left: 5px;
+    background-color: white;
+    border: solid 0.5px #DADADA;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s ease-out;
+}
+.submitButton:hover {
+    background-color: greenyellow;
+    transition: 0.5s ease-out;
 }

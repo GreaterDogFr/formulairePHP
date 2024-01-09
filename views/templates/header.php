@@ -7,4 +7,6 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Inscription </h1>
+    </header>
