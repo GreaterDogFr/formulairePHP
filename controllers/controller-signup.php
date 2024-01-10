@@ -49,7 +49,10 @@ if (isset($_POST['password']) && (isset($_POST['passwordCheck']))) {
     }
 }
 
-// var_dump($_POST);
-// var_dump($errors);
+//Pour confirmer, on vérifie qu'il n'y a pas d'erreur.
+//Si notre array est vide, on affiche une boite qui résumé notre inscription
+
+var_dump($_POST);
+var_dump($errors);
 
 include '../views/view-signup.php';

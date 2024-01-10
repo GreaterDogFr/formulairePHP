@@ -66,6 +66,7 @@ include '../views/templates/header.php';
 
     <button class="submitButton btn btn-light" type="submit">S'enregistrer </button>
 </form>
+?>
 
 <?php
 // Footer
